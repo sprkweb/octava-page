@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
 function listOctave(note) {
@@ -26,17 +29,18 @@ class App extends React.Component {
   }
   
   render() {
+    let numbers = [...Array(notes.length).keys()];
     return <div>
-      <div class="form-inline">
-        <div class="form-group root-note-form">
-          <label for="rootNote">Root: </label>
+      <div className="form-inline">
+        <div className="form-group root-note-form">
+          <label htmlFor="rootNote">Root: </label>
           <input type="text" id="rootNote"
                  value={this.state.rootNote} onChange={this.setRootNote} 
-                 class="form-control form-control-sm" />
+                 className="form-control form-control-sm" />
         </div>
       </div>
-      <div class="container guitar">
-        <Row list={[...Array(notes.length).keys()]} />
+      <div className="container guitar">
+        <Row list={numbers} />
         <Row list={listOctave(this.state.rootNote)} />
       </div>
     </div>;
@@ -44,10 +48,10 @@ class App extends React.Component {
 }
 
 function Row(params) {
-  list = params.list;
-  return <div class="row">
+  let list = params.list;
+  return <div className="row">
     {list.map((note) => 
-        <div class="col"><span>{note}</span></div>
+        <div className="col"><span>{note}</span></div>
     )}
   </div>;
 }
