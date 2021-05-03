@@ -1,0 +1,56 @@
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+#root {
+  margin: 3em auto;
+  max-width: 800px;
+}
+
+.root-note-form {
+  padding-bottom: 2em;
+  margin: 0 auto;
+}
+.root-note-form label {
+  padding-right: 1em;
+}
+.root-note-form input[type=text] {
+  width: 5em;
+}
+
+.guitar .row .col {
+  border: 0px solid grey;
+  border-width: 0 1px 0 0;
+  padding: 3px 0;
+  text-align: center;
+  position: relative;
+}
+.guitar .row .col span {
+  background-color: white;
+  padding: 3px;
+}
+.guitar .row .col::before {
+  content: "";
+  border: 1px solid silver;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+  z-index: -1;
+}
+.guitar .row .col:first-of-type {
+  border-width: 0 3px 0 0;
+}
+.guitar .row .col:first-of-type::before {
+  border: 0;
+}
+.guitar .row:first-of-type .col {
+  border: 0;
+  color: grey;
+}
+.guitar .row:first-of-type .col::before {
+  border: 0;
+}
+.guitar .row:first-of-type .col:nth-of-type(4), .guitar .row:first-of-type .col:nth-of-type(6), .guitar .row:first-of-type .col:nth-of-type(8), .guitar .row:first-of-type .col:nth-of-type(10) {
+  font-weight: bold;
+}
