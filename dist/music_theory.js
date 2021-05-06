@@ -22,6 +22,14 @@ export const shapes = {
       semitones: [0, 3, 6]
     },
     {
+      name: "Suspended second chord",
+      semitones: [0, 2, 7]
+    },
+    {
+      name: "Suspended fourth chord",
+      semitones: [0, 5, 7]
+    },
+    {
       name: "Major sixth chord",
       semitones: [0, 4, 7, 9]
     },
