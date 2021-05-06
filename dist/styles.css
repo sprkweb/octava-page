@@ -1,14 +1,23 @@
-body {
-  font-family: "Fira Sans", sans-serif;
+#root {
+  margin-top: 2em;
 }
 
-#root {
-  margin: 3em auto;
-  max-width: 800px;
+.shape-type-container {
+  background-color: #007bff;
+  text-align: center;
+  color: white;
+}
+
+.shape-container {
+  background-color: #e9ecef;
+}
+
+.root-note-form, .shape-form {
+  padding: 1em 0;
 }
 
 .root-note-form {
-  padding-bottom: 2em;
+  padding-bottom: 0;
   margin: 0 auto;
 }
 .root-note-form label {
@@ -18,18 +27,30 @@ body {
   width: 5em;
 }
 
-.guitar .row .col {
+.guitar {
+  table-layout: fixed;
+  margin-top: 3em;
+}
+.guitar .active-note, .guitar .active-open-string {
+  font-weight: 700;
+}
+.guitar .hidden-note {
+  color: lightgrey;
+}
+.guitar tr th, .guitar tr td {
   border: 0px solid grey;
-  border-width: 0 1px 0 0;
   padding: 3px 0;
   text-align: center;
+}
+.guitar tr td {
+  border-width: 0 1px 0 0;
   position: relative;
 }
-.guitar .row .col span {
+.guitar tr td span {
   background-color: white;
   padding: 3px;
 }
-.guitar .row .col::before {
+.guitar tr td::before {
   content: "";
   border: 1px solid silver;
   width: 100%;
@@ -38,19 +59,22 @@ body {
   top: calc(50% - 1px);
   z-index: -1;
 }
-.guitar .row .col:first-of-type {
+.guitar tbody th {
   border-width: 0 3px 0 0;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
-.guitar .row .col:first-of-type::before {
-  border: 0;
-}
-.guitar .row:first-of-type .col {
+.guitar thead th {
   border: 0;
   color: grey;
+  font-weight: 400;
 }
-.guitar .row:first-of-type .col::before {
+.guitar thead th::before {
   border: 0;
 }
-.guitar .row:first-of-type .col:nth-of-type(4), .guitar .row:first-of-type .col:nth-of-type(6), .guitar .row:first-of-type .col:nth-of-type(8), .guitar .row:first-of-type .col:nth-of-type(10) {
+.guitar thead th:first-of-type {
+  width: 4.5rem;
+}
+.guitar thead th:nth-of-type(4), .guitar thead th:nth-of-type(6), .guitar thead th:nth-of-type(8), .guitar thead th:nth-of-type(10) {
   font-weight: bold;
 }
