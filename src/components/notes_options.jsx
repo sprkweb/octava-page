@@ -40,7 +40,10 @@ export default class NotesOptions extends React.Component {
 
     setNotes(state, props) {
         const { type, shape, root } = state;
-        if (type == 'None') return [];
+        if (type == 'None') {
+            props.onChange(type, []);
+            return;
+        }
         const noteNumbers = props.shapes[type][shape].semitones;
         const octave = listOctave(root, props.notes, 0);
         const selectedNotes = noteNumbers.map((n) => octave[n]);
