@@ -1,5 +1,6 @@
 #root {
   margin-top: 2em;
+  text-align: center;
 }
 
 .shape-type-container {
@@ -92,4 +93,15 @@
       font-weight: bold;
     }
   }
+}
+
+.btn-control-rows {
+  font-family: "Times New Roman", Courier;
+  font-weight: bold;
+  margin: 1em;
+  line-height: 1;
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
 }

@@ -13,17 +13,34 @@ class App extends React.Component {
         super(props);
         this.state = {
             type: 'None',
-            highlightNotes: []
+            highlightNotes: [],
+            rowsTotal: 6,
         };
 
         this.updateOptions = this.updateOptions.bind(this);
+        this.addRow = this.addRow.bind(this);
+        this.removeRow = this.removeRow.bind(this);
     }
 
     updateOptions(type, highlightNotes) {
         this.setState({ type, highlightNotes });
     }
 
+    addRow() {
+        this.setState((state) => {
+            return { rowsTotal: state.rowsTotal + 1 };
+        });
+    }
+
+    removeRow() {
+        this.setState((state) => {
+            return { rowsTotal: state.rowsTotal - 1 };
+        });
+    }
+
     render() {
+        const rowNums = [...Array(this.state.rowsTotal).keys()];
+        const tuning = ['E', 'A', 'D', 'G', 'B'];
         return <div>
             <NotesOptions shapes={shapes} notes={notes} onChange={this.updateOptions} />
             <table className="container guitar">
@@ -36,9 +53,16 @@ class App extends React.Component {
                 </thead>
 
                 <tbody>
-                    <Row defaultOpenString="E" notes={notes} highlightNotes={this.state.highlightNotes} />
+                {rowNums.map((index) => 
+                    <Row defaultOpenString={tuning[index % tuning.length]} notes={notes} 
+                                highlightNotes={this.state.highlightNotes} key={index} />
+                )}
                 </tbody>
             </table>
+            <button onClick={this.addRow}
+                type="button" className="btn btn-light btn-control-rows">+</button>
+            <button onClick={this.removeRow}
+                type="button" className="btn btn-light btn-control-rows">−</button>
 
             <AutocompleteList id="notes" list={notes} />
         </div>;
