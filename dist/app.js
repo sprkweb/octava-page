@@ -32,7 +32,7 @@ class App extends React.Component {
   }
   render() {
     const rowNums = [...Array(this.state.rowsTotal).keys()];
-    const tuning = ["E", "A", "D", "G", "B"];
+    const tuning = ["E", "B", "G", "D", "A"];
     return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(NotesOptions, {
       shapes,
       notes,
