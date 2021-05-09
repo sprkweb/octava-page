@@ -1,6 +1,32 @@
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 #root {
   margin-top: 2em;
   text-align: center;
+  flex: 1 0 auto;
+}
+
+footer {
+  text-align: center;
+  flex: 0 0 auto;
+  padding: 1rem;
+}
+footer a {
+  text-decoration: none !important;
+  color: black;
+  margin: 0 1em;
+}
+footer .gh-link svg {
+  height: 1.3em;
+  vertical-align: text-bottom;
 }
 
 .shape-type-container {
