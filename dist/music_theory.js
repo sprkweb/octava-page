@@ -94,6 +94,26 @@ export const shapes = {
     {
       name: "Locrian",
       semitones: [0, 1, 3, 5, 6, 8, 10]
+    },
+    {
+      name: "Major pentatonic",
+      semitones: [0, 2, 4, 7, 9]
+    },
+    {
+      name: "Egyptian (suspended) pentatonic",
+      semitones: [0, 2, 5, 7, 10]
+    },
+    {
+      name: "Blues minor pentatonic",
+      semitones: [0, 3, 5, 8, 10]
+    },
+    {
+      name: "Blues major pentatonic",
+      semitones: [0, 2, 5, 7, 9]
+    },
+    {
+      name: "Minor pentatonic",
+      semitones: [0, 3, 5, 7, 10]
     }
   ]
 };
