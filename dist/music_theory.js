@@ -72,6 +72,10 @@ export const shapes = {
       semitones: [0, 2, 4, 5, 7, 9, 11]
     },
     {
+      name: "Natural minor (Aeolian)",
+      semitones: [0, 2, 3, 5, 7, 8, 10]
+    },
+    {
       name: "Dorian",
       semitones: [0, 2, 3, 5, 7, 9, 10]
     },
@@ -86,10 +90,6 @@ export const shapes = {
     {
       name: "Mixolydian",
       semitones: [0, 2, 4, 5, 7, 9, 10]
-    },
-    {
-      name: "Natural minor (Aeolian)",
-      semitones: [0, 2, 3, 5, 7, 8, 10]
     },
     {
       name: "Locrian",
