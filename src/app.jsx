@@ -5,7 +5,8 @@ import NotesOptions from './components/notes_options'
 import AutocompleteList from './components/autocomplete_list'
 import Row from './components/row';
 
-import { notes, shapes } from './music_theory'
+import { notes, shapes } from './model/music_theory'
+
 const noteNumbers = [...Array(notes.length).keys()];
 
 class App extends React.Component {

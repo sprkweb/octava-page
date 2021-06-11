@@ -1,6 +1,6 @@
 import React from 'react';
 
-import listOctave from '../listOctave';
+import listOctave from '../model/list_octave';
 
 import RootInputForm from './root_input_form'
 import RadioButtonGroup from './radiobutton_group'

@@ -1,5 +1,5 @@
 import React from 'react';
-import listOctave from '../listOctave';
+import listOctave from '../model/list_octave';
 
 export default class Row extends React.Component {
     constructor(props) {
