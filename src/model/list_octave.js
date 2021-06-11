@@ -1,4 +1,6 @@
-export default function listOctave(firstNote, notes, startWith = 1) {
+import { notes } from './music_theory';
+
+export default function listOctave(firstNote, startWith = 1) {
     let octave = [];
     let start = notes.indexOf(firstNote);
     if (start == -1) start = 0;

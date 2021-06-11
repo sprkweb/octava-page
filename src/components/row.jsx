@@ -17,7 +17,7 @@ export default class Row extends React.Component {
 
     render() {
         const openString = this.state.openString;
-        const list = listOctave(openString, this.props.notes);
+        const list = listOctave(openString);
         const highlights = this.props.highlightNotes;
         const noHighlight = highlights.length == 0;
         return <tr>

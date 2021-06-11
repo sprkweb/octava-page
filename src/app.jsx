@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 
 import NotesOptions from './components/notes_options'
 import AutocompleteList from './components/autocomplete_list'
-import Row from './components/row';
+import GuitarNeck from './components/guitar_neck';
 
-import { notes, shapes } from './model/music_theory'
+import { notes, shapes } from './model/music_theory';
 
-const noteNumbers = [...Array(notes.length).keys()];
 
 class App extends React.Component {
     constructor(props) {
@@ -40,32 +39,14 @@ class App extends React.Component {
     }
 
     render() {
-        const rowNums = [...Array(this.state.rowsTotal).keys()];
-        const tuning = ['E', 'B', 'G', 'D', 'A'];
         return <div>
-            <NotesOptions shapes={shapes} notes={notes} onChange={this.updateOptions} />
-            <table className="container guitar">
-                <thead>
-                    <tr>
-                        {noteNumbers.map((n) =>
-                            <th key={n}><span>{n}</span></th>
-                        )}
-                    </tr>
-                </thead>
-
-                <tbody>
-                {rowNums.map((index) => 
-                    <Row defaultOpenString={tuning[index % tuning.length]} notes={notes} 
-                                highlightNotes={this.state.highlightNotes} key={index} />
-                )}
-                </tbody>
-            </table>
+            <NotesOptions shapes={shapes} onChange={this.updateOptions} />
+            <AutocompleteList id="notes" list={notes} />
+            <GuitarNeck rowsTotal={this.state.rowsTotal} highlightNotes={this.state.highlightNotes} />
             <button onClick={this.addRow}
                 type="button" className="btn btn-light btn-control-rows">+</button>
             <button onClick={this.removeRow}
                 type="button" className="btn btn-light btn-control-rows">−</button>
-
-            <AutocompleteList id="notes" list={notes} />
         </div>;
     };
 }

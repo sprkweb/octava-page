@@ -1,7 +1,8 @@
 export const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
+export const standardTuning = ['E', 'B', 'G', 'D', 'A', 'E'];
+
 // Fill free to add something here via pull request
-// TODO: pro mode
 export const shapes = {
     'Chord': [
         {
