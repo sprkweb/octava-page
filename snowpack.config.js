@@ -5,5 +5,11 @@ module.exports = {
     },
     plugins: [
         "@snowpack/plugin-sass"
-    ]
+    ],
+    optimize: {
+      bundle: true,
+      treeshake: true,
+      minify: true,
+      sourcemap: 'external'
+    }
 };
