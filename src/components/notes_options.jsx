@@ -58,8 +58,12 @@ export default class NotesOptions extends React.Component {
             <div>
                 <div className="shape-type-container">
                     <div className="container shape-form">
-                        <RadioButtonGroup className="btn-light" name="shape"
-                            values={types} defaultValue="None" onChange={this.setType} />
+                        <RadioButtonGroup 
+                            className="btn-primary btn-outline-light" 
+                            name="shape"
+                            values={types} 
+                            defaultValue="None" 
+                            onChange={this.setType} />
                     </div>
                 </div>
                 { !typeIsNone &&
