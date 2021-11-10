@@ -39,15 +39,19 @@ class App extends React.Component {
     }
 
     render() {
-        return <div>
+        return <React.Fragment>
             <NotesOptions shapes={shapes} onChange={this.updateOptions} />
             <AutocompleteList id="notes" list={notes} />
-            <GuitarNeck rowsTotal={this.state.rowsTotal} highlightNotes={this.state.highlightNotes} />
-            <button onClick={this.addRow}
-                type="button" className="btn btn-light btn-control-rows">+</button>
-            <button onClick={this.removeRow}
-                type="button" className="btn btn-light btn-control-rows">−</button>
-        </div>;
+            <main>
+                <GuitarNeck 
+                    rowsTotal={this.state.rowsTotal} 
+                    highlightNotes={this.state.highlightNotes} />
+                <button onClick={this.addRow}
+                    type="button" className="btn btn-light btn-control-rows">+</button>
+                <button onClick={this.removeRow}
+                    type="button" className="btn btn-light btn-control-rows">−</button>
+            </main>
+        </React.Fragment>;
     };
 }
 
