@@ -1,3 +1,7 @@
+:root {
+  --brand-color: #5F4B8B;
+}
+
 html, body {
   height: 100%;
 }
@@ -38,13 +42,13 @@ footer {
 }
 
 .shape-type-container {
-  background-color: #007bff;
+  background-color: var(--brand-color);
   text-align: center;
   color: white;
 }
 
 .shape-container {
-  background-color: #e9ecef;
+  background-color: #ececec;
 }
 
 .root-note-form, .shape-form {
@@ -114,7 +118,7 @@ footer {
 
   thead th {
     border: 0;
-    color: grey;
+    color: #444;
     font-weight: 400;
     
     &::before {
