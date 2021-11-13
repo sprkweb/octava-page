@@ -10,7 +10,7 @@ export default class NotesOptions extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: 'None',
+            type: 'Notes',
             root: 'E',
             shape: 0
         };
@@ -40,7 +40,7 @@ export default class NotesOptions extends React.Component {
 
     setNotes(state, props) {
         const { type, shape, root } = state;
-        if (type == 'None') {
+        if (type == 'Notes') {
             props.onChange(type, []);
             return;
         }
@@ -51,9 +51,9 @@ export default class NotesOptions extends React.Component {
     }
 
     render() {
-        const types = ['None', ...Object.keys(this.props.shapes)];
-        const typeIsNone = this.state.type == 'None';
-        const shapes = typeIsNone ? [] : this.props.shapes[this.state.type];
+        const types = ['Notes', ...Object.keys(this.props.shapes)];
+        const typeIsNotes = this.state.type == 'Notes';
+        const shapes = typeIsNotes ? [] : this.props.shapes[this.state.type];
         return (
             <div>
                 <div className="shape-type-container">
@@ -62,11 +62,11 @@ export default class NotesOptions extends React.Component {
                             className="btn-outline-light" 
                             name="shape"
                             values={types} 
-                            defaultValue="None" 
+                            defaultValue="Notes" 
                             onChange={this.setType} />
                     </div>
                 </div>
-                { !typeIsNone &&
+                { !typeIsNotes &&
                     <div className="shape-container" >
                         <RootInputForm rootNote={this.state.root} onChange={this.setRoot} />
                         <div className="container shape-form">

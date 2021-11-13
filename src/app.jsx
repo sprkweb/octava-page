@@ -12,7 +12,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: 'None',
+            type: 'Notes',
             highlightNotes: [],
             rowsTotal: 6,
         };
