@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { registerPWA } from './pwa';
+
 import NotesOptions from './components/notes_options'
 import AutocompleteList from './components/autocomplete_list'
 import GuitarNeck from './components/guitar_neck';
@@ -55,7 +57,8 @@ class App extends React.Component {
     };
 }
 
-
+screen.orientation.lock("landscape").catch((e) => { /* Let's pretend this didn't happen */ });
+registerPWA();
 ReactDOM.render(
     <App />,
     document.getElementById('root')

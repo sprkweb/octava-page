@@ -1,3 +1,5 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
 :root {
   --brand-color: #5F4B8B;
 }
@@ -29,10 +31,14 @@ footer {
 	flex: 0 0 auto;
   padding: 1rem;
   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
   a {
     text-decoration: none !important;
     color: black;
-    margin: 0 1em;
   }
 
   .gh-link svg {
