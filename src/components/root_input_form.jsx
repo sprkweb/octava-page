@@ -5,7 +5,7 @@ export default class RootInputForm extends InputForm {
     render() {
         return (
             <div className="root-note-form">
-                <label htmlFor="rootNote">Root: </label>
+                <label htmlFor="rootNote">Root note: </label>
                 <input type="text" 
                     list="notes"
                     defaultValue={this.props.rootNote} 

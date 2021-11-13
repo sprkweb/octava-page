@@ -11,10 +11,30 @@ export default class GuitarNeck extends React.Component {
     render() {
         const rowNums = [...Array(this.props.rowsTotal).keys()];
         return <table className="container guitar">
+            <caption>
+                Notes on the guitar
+            </caption>
+
             <thead>
                 <tr>
+                    <th scope="col" 
+                        className="hint"> 
+                        Open string
+                    </th>
+                    <th scope="colgroup" 
+                        colSpan={noteNumbers.length - 1} 
+                        className="hint">
+                        Guitar frets
+                    </th>
+                </tr>
+                <tr>
                     {noteNumbers.map((n) =>
-                        <th key={n}><span>{n}</span></th>
+                        <th key={n} 
+                        scope="col" 
+                        className="fret-num"
+                        title={ n === 0 ? 'Open string' : `Fret №${n}`}>
+                            <span>{n}</span>
+                        </th>
                     )}
                 </tr>
             </thead>

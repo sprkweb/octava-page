@@ -82,6 +82,15 @@ footer {
     color: lightgrey;
   }
 
+  caption {
+    text-align: center;
+  }
+
+  .hint {
+    font-style: italic;
+    font-weight: 400;
+  }
+
   tr {
     th, td {
       border: 0px solid grey;
@@ -89,44 +98,44 @@ footer {
       text-align: center;
     }
 
-    td {
-      border-width: 0 1px 0 0;
-      position: relative;
-      
-      span {
-        background-color: white;
-        padding: 3px;
-      }
-      
-      &::before {
-        content: "";
-        border: 1px solid silver;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: calc(50% - 1px);
-        z-index: -1;
-      }
+    th:first-of-type {
+      width: 11ch;
     }
   }
 
-  tbody th {
+  .open-string-note {
     border-width: 0 3px 0 0;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
 
-  thead th {
+  .fret-note {
+    border-width: 0 1px 0 0;
+    position: relative;
+    
+    span {
+      background-color: white;
+      padding: 3px;
+    }
+    
+    &::before {
+      content: "";
+      border: 1px solid silver;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1px);
+      z-index: -1;
+    }
+  }
+
+  .fret-num {
     border: 0;
     color: #444;
     font-weight: 400;
     
     &::before {
       border: 0;
-    }
-
-    &:first-of-type {
-      width: 4.5rem;
     }
     
     &:nth-of-type(4), &:nth-of-type(6), &:nth-of-type(8), &:nth-of-type(10) {

@@ -21,13 +21,14 @@ export default class Row extends React.Component {
         const highlights = this.props.highlightNotes;
         const noHighlight = highlights.length == 0;
         return <tr>
-            <th>
+            <th scope="row" className="open-string-note">
                 <input type="text" list="notes"
+                    title="Pitch of the string"
                     defaultValue={openString} onChange={this.setOpenString}
                     className={ `form-control form-control-sm  ${highlights.includes(openString) ? 'active-open-string' : ''}` } />
             </th>
             {list.map((note) =>
-                <td key={note}>
+                <td key={note} className="fret-note">
                     <span className={ noHighlight ? '' : (highlights.includes(note) ? 'active-note' : 'hidden-note') }>
                         {note}
                     </span>
