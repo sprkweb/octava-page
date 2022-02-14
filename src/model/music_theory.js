@@ -2,7 +2,7 @@ export const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#'
 
 export const standardTuning = ['E', 'B', 'G', 'D', 'A', 'E'];
 
-// Fill free to add something here via pull request
+// Feel free to add something here via pull request
 export const shapes = {
     'Chord': [
         {
